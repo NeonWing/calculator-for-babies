@@ -9,11 +9,11 @@ body {
 
 .calculator {
     background-color: #264653;
-    width: 40%;
+    width: 20%;
+    height: 40%;
 }
 
 .top {
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +22,8 @@ body {
 
 .screen {
     height: 50px;
-    flex: 1;
     background-color: white;
+    width: 90%;
 }
 
 .buttons {
@@ -31,30 +31,12 @@ body {
     flex-direction: column;
 }
 
-.row-one, .row-two, .row-three, .row-four {
+.row-one, .row-two, .row-three, .row-four, .row-five {
     display: flex;
+    justify-content: space-around;
 }
 
-.row-four .left {
-    display: flex;
-    flex-direction: column;
-}
-
-.left .top-row, .left .bottom-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.row-four .right {
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-}
-
-.backspace {
-    flex: 2;
-}
-
-.seven, .eight, .nine, .minus, .divide, .multiply{
+.reg {
     flex: 1;
 }
+
