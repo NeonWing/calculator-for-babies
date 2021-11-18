@@ -25,12 +25,21 @@ body {
     height: 100px;
     background-color: white;
     width: 100%;
-    font-size: 50px;
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 10px;
     border-radius: 12px;
+}
+
+.screen .currentText {
+    font-size: 50px;
+}
+
+.screen .previousText {
+    font-size: 35px;
+    color: #264653;
 }
 
 .buttons {
@@ -46,7 +55,7 @@ body {
     gap: 10px;
 }
 
-.reg, .reg-op {
+.reg, .reg-op, .reg-screen {
     flex: 1;
     padding: 10px;
     min-width: 100px;
@@ -56,11 +65,11 @@ body {
     border: none;
 }
 
-.reg:hover, .reg-op:hover {
+.reg:hover, .reg-op:hover, .reg-screen:hover {
     filter: brightness(85%);
 }
 
-.reg:active, .reg-op:active {
+.reg:active, .reg-op:active, .reg-screen:active {
     filter: brightness(50%);
 }
 
