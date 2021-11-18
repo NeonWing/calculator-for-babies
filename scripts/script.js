@@ -41,7 +41,7 @@ const clearBtn = document.getElementById("clear").addEventListener('click', () =
 const deleteBtn = document.getElementById("delete").addEventListener('click', () => {
     let result = displayText.innerHTML.slice(0, -1);
     console.log(result);
-    displayText.innerHtml = 0;
+    displayText.innerHTML = result;
 });
 
 function operate(first, operator, second) {
@@ -81,10 +81,11 @@ function divide(first, second) {
     return first / second;
 }
 
-function addToDisplay(e) {
+function addToDisplay(num) {
     if(displayText.innerHTML === "0"){
-        displayText.innerHTML = e;
+        displayText.innerHTML = num;
     } else {
-        displayText.innerHTML = displayText.innerHTML + e;
+        if(num === "." && displayText.innerHTML.includes(".")) return
+        else displayText.innerHTML = displayText.innerHTML + num;
     }
 }
