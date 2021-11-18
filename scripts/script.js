@@ -1,6 +1,6 @@
-let firstNum;
-let operator;
-let secondNum;
+let firstNum = 0;
+let operator = '';
+let secondNum = 0;
 
 //Buttons Variables
 const numbers = document.querySelectorAll(".reg");
@@ -17,10 +17,16 @@ operatorBtns.forEach((btn) => {
             secondNum = Number(displayText.innerHTML);
             updateDisplay(operate(firstNum, operator, secondNum));
         } else {
-            firstNum = Number(displayText.innerHTML);
-            operator = btn.id;
-            prevText.innerHTML = firstNum;
-            displayText.innerHTML = "0";
+            if(prevText.innerHTML !== '') {
+                secondNum = Number(displayText.innerHTML);
+                initiateChain(operate(firstNum, operator, secondNum));
+                operator = btn.id;
+            } else {
+                firstNum = Number(displayText.innerHTML);
+                operator = btn.id;
+                prevText.innerHTML = firstNum;
+                displayText.innerHTML = "0";
+            }
         }
     }); 
 });
@@ -63,6 +69,13 @@ function updateDisplay(answer){
     secondNum = 0;
     operator = "";
     firstNum = 0;
+}
+
+function initiateChain(answer) {
+    displayText.innerHTML = 0;
+    prevText.innerHTML = answer;
+    secondNum = 0;
+    firstNum = answer;
 }
 
 function add(first, second) {
