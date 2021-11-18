@@ -59,7 +59,11 @@ function operate(first, operator, second) {
             case 'multiply':
                 return multiply(first, second);
             case 'divide':
-               return divide(first, second);
+                if(first == 0 || second == 0) {
+                    alert("Fuck You") 
+                    return 0;
+                }
+                else return divide(first, second);
        }
 }
 
