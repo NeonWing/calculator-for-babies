@@ -46,7 +46,7 @@ body {
     gap: 10px;
 }
 
-.reg {
+.reg, .reg-op {
     flex: 1;
     padding: 10px;
     min-width: 100px;
@@ -56,11 +56,11 @@ body {
     border: none;
 }
 
-.reg:hover {
+.reg:hover, .reg-op:hover {
     filter: brightness(85%);
 }
 
-.reg:active {
+.reg:active, .reg-op:active {
     filter: brightness(50%);
 }
 
